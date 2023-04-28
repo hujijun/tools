@@ -1,0 +1,18 @@
+[package]
+name = "autoops_cp"
+version = "0.1.0"
+edition = "2023"
+
+[dependencies]
+walkdir = "2.3.2"
+flate2 = "1.0.25"
+chrono = "0.4.23"
+tar = "0.4.38"
+hex = "0.4.3"
+sha2 = "0.10.6"
+
+
+[profile.release]
+opt-level = 'z'
+lto = true
+panic = 'abort'
